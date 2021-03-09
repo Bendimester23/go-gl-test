@@ -19,9 +19,9 @@ jobs:
         go-version: 1.16
 
     - name: Build
-      run: go build -v ./...
+      run: go build -o gl.exe -v ./...
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.2
       with:
-        path: 'gogl-test.exe'
+        path: 'gl.exe'
